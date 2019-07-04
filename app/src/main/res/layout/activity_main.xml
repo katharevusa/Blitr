@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <EditText
+        android:id="@+id/et_pax"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Number of people"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_pax"
+        android:layout_centerHorizontal="true"
+        android:hint="Index"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_event_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_id"
+        android:layout_centerHorizontal="true"
+        android:hint="Event name" />
+
+
+    <EditText
+        android:id="@+id/et_date"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_event_name"
+        android:layout_centerHorizontal="true"
+        android:hint="Date"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_date"
+        android:layout_centerHorizontal="true"
+        android:hint="Amount"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_amount"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:text="Add this event" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnAdd"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="View exisiting transactions" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnView"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Update event" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnUpdate"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Delete event" />
+
+
+
+
+
+</RelativeLayout>
