@@ -1,85 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#880e4f"
+    android:background="#edf0f5"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="center"
     >
 
 
-    <EditText
-        android:id="@+id/et_id"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/custom"
-        android:layout_marginBottom="20dp"
-        android:hint="Index"
-        android:inputType="number"
-        android:drawableLeft="@drawable/ic_format_list_numbered_black_24dp"/>
 
-    <EditText
-        android:id="@+id/et_event_name"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/custom"
-        android:layout_below="@id/et_id"
-        android:layout_centerHorizontal="true"
-        android:hint="Event name"
-        android:drawableLeft="@drawable/ic_cake_black_24dp"/>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-    <EditText
-        android:id="@+id/et_date"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@+id/et_event_name"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/custom"
-        android:hint="Date"
-        android:inputType="date"
-        android:drawableLeft="@drawable/ic_today_black_24dp"/>
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Index"
+            android:drawableLeft="@drawable/ic_format_list_numbered_black_24dp" />
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/et_amount"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/et_date"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/custom"
-        android:hint="Amount"
-        android:inputType="numberDecimal"
-        android:drawableLeft="@drawable/ic_attach_money_black_24dp"
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_event_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Name"
+            android:drawableLeft="@drawable/ic_format_list_numbered_black_24dp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            android:drawableLeft="@drawable/ic_format_list_numbered_black_24dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:drawableLeft="@drawable/ic_format_list_numbered_black_24dp" />
+    </android.support.design.widget.TextInputLayout>
         />
-    <EditText
-        android:id="@+id/et_pax"
-        android:layout_marginTop="20dp"
-        android:layout_width="200dp"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@+id/et_amount"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:hint="Number of people"
-        android:background="@drawable/custom"
-        android:inputType="number"
-        android:drawableLeft="@drawable/ic_people_black_24dp"/>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_pax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pax"
+            android:drawableLeft="@drawable/ic_format_list_numbered_black_24dp" />
+    </android.support.design.widget.TextInputLayout>
 
 
     <Button
         android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_amount"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="10dp"
         android:text="Add this event" />
 
     <Button
         android:id="@+id/btnView"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/btnAdd"
@@ -89,7 +100,7 @@
 
     <Button
         android:id="@+id/btnUpdate"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnView"
         android:layout_marginTop="10dp"
@@ -100,7 +111,7 @@
 
     <Button
         android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnUpdate"
@@ -110,7 +121,5 @@
         android:text="Delete event" />
 
 
+</LinearLayout>
 
-
-
-</RelativeLayout>
