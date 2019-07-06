@@ -1,11 +1,13 @@
 package com.example.orbitalproject;
 
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -43,5 +45,14 @@ public class ViewListContents extends AppCompatActivity {
             listView = (ListView) findViewById(R.id.listView);
             listView.setAdapter(adapter);
         }
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(ViewListContents.this, Compute.class);
+                User u = userList.get(i);
+                intent.putExtra("Cost", u.getAmount());
+                startActivity(intent);
+            }
+        });
     }
 }

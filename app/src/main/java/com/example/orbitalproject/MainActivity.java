@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         etName = (EditText) findViewById(R.id.et_event_name);
         etDate = (EditText) findViewById(R.id.et_date);
         etID = (EditText) findViewById(R.id.et_id);
+        etPax = (EditText) findViewById(R.id.et_pax);
 
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnView = (Button) findViewById(R.id.btnView);
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v){
                         boolean isUpdate = myDB.updateData(etID.getText().toString(),etName.getText().toString(),
-                                etDate.getText().toString(),etAmount.getText().toString());
+                                etDate.getText().toString(),etAmount.getText().toString(),etPax.getText().toString());
                         if(isUpdate == true){
                             Toast.makeText(MainActivity.this,"Transaction is updated",Toast.LENGTH_LONG).show();
                         }else{
@@ -87,9 +88,11 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        boolean isInserted = myDB.addData(etName.getText().toString(),
+                        boolean isInserted = myDB.addData(
+                                etName.getText().toString(),
                                 etDate.getText().toString(),
-                                etAmount.getText().toString());
+                                etAmount.getText().toString(),
+                                etPax.getText().toString());
                         if (isInserted == true) {
                             Toast.makeText(MainActivity.this, "Successfully Entered Data!", Toast.LENGTH_LONG).show();
                         } else {

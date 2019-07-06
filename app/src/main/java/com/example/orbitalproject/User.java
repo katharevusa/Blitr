@@ -6,14 +6,21 @@ public class User {
     private String Name;
     private String Date;
     private String Amount;
+    //private String Pax;
 
-    public User(String id,String name,String date, String amount){
+
+
+
+
+    public User(String id, String name, String date, String amount){
         ID = id;
         Name = name;
         Date = date;
         Amount = amount;
+        //Pax = pax;
 
     }
+
 
     public String getID(){return ID; }
 

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewListContents"></activity>
+        <activity android:name=".Compute"></activity>
+        <activity android:name=".ViewListContents" />
         <activity android:name=".FourColumn_ListAdapter" />
         <activity android:name=".MainActivity">
             <intent-filter>
